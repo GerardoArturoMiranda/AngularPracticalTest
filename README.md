@@ -7,6 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 https://drive.google.com/file/d/1NpmgrvDvRJaiNZPgyKmxk_6vzyRA145E/view?usp=sharing
 
+# AngularPracticalTest
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
