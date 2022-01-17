@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "Arturo15",
+    "password": "ec0wcz",
+    "database": "db_test",
+    "host": "127.0.0.1",
+    "port": 8889,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "Arturo15",
+    "password": "ec0wcz",
+    "database": "db_test",
+    "host": "127.0.0.1",
+    "port": 8889,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "Arturo15",
+    "password": "ec0wcz",
+    "database": "db_test",
+    "host": "127.0.0.1",
+    "port": 8889,
+    "dialect": "mysql"
+  }
+}

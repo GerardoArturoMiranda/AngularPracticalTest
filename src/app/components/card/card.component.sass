@@ -1,0 +1,73 @@
+@import "node_modules/bootstrap/scss/functions"
+@import "node_modules/bootstrap/scss/variables"
+@import "node_modules/bootstrap/scss/mixins"
+@import "node_modules/bootstrap/scss/card"
+
+@import 'src/styles'
+.minicard
+  border-top: rgba($black, 0.04) 1px solid
+  box-shadow: $box-shadow-sm
+  transition: box-shadow 500ms ease
+  position: absolute
+  transform: translateY(-62px)
+  background: #418B9E
+  color: white
+  padding: 1rem
+  margin: 1rem 0
+  &:hover
+    box-shadow: $box-shadow
+
+.card-view
+  width: 95%
+  float: left
+  height: auto
+  padding: 2rem
+  margin: 2rem 0
+  border-radius: 20px
+  border-top: rgba($black, 0.04) 1px solid
+  box-shadow: $box-shadow-sm
+  transition: box-shadow 500ms ease
+  background: #ffffff
+  transform: translate(3%)
+  &:hover
+    box-shadow: $box-shadow
+  .card-view-header
+    margin-bottom: 1rem
+  .card-view-body
+    text-align: justify
+
+.leftbulb
+  position: absolute
+  transform: translate(300%, -80%)
+
+.img
+  transform: translate(10%)
+  height: auto
+  border-radius: 30px
+  border-top: rgba($black, 0.04) 1px solid
+  box-shadow: $box-shadow-sm
+  transition: box-shadow 500ms ease
+
+  &:hover
+    box-shadow: $box-shadow
+  .card-view-header
+    margin-bottom: 1rem
+  .card-view-body
+    text-align: justify
+
+.subtitles
+  justify-content: center
+  align-items: center
+  font-size: 11px
+  li
+    width: 500px
+
+p
+  font-size: 11px
+
+.imgborder
+  border-radius: 30px
+
+.checked
+  color: #e1f929
+  

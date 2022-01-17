@@ -1,0 +1,22 @@
+  <app-navbar></app-navbar>
+  <div *ngIf="(auth.isAuthenticated$ | async) === true"> 
+    <img *ngIf="ideas.length == 0" src="https://thumbs.dreamstime.com/b/ningunas-ideas-en-icono-de-la-mente-elemento-del-humana-para-los-apps-móviles-concepto-y-web-l%C3%ADnea-fina-se-puede-utilizar-126368530.jpg" class="cutimg">
+    <h1 *ngIf="ideas.length == 0">Enter your info with the API</h1>
+    <div *ngIf="ideas">
+      <app-card class="float-sm-left" *ngFor="let idea of ideas"
+      [id]="idea.id"
+      [assignees]="idea.assignee"
+      [workflow_name]="idea.workflow"
+      [review_score]="idea.score"
+      [author]="idea.author"
+      [picture]="idea.picture"
+      [date] = "idea.createdAt"
+      ></app-card>
+    </div>
+  </div>
+  <img *ngIf="(auth.isAuthenticated$ | async) === false" src="https://au-assets.s3-us-west-2.amazonaws.com/assets/campaigns/2020/Q2/04-03+Minimalist+Decor+Ideas/03-27_Open+Things+Up_kristinswen.jpg" class="cutimg">
+  
+
+
+
+

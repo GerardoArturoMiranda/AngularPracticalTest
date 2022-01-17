@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="card-view">
+  <div class="row card-view-header">
+    <div class="col">
+      <span class="minicard material-icons mt-2 mb-2 ml-2 mr-2">
+        lightbulb
+        </span>
+      <span class="material-icons leftbulb">
+        assignment
+        </span>  
+    </div>
+  </div>
+  <div class="row card-view-body">
+      <div class="row mb-2">
+        <div class="col-sm-10">
+          <div class="d-flex flex-wrap align-items-center">
+              <div class="col-sm-6 img">
+                <div class="row mb-2">
+                  <img src="{{picture}}" class="imgborder">
+                </div>
+              </div>
+              <div class="row subtitles">
+                <div class="col-sm-2">
+                  <li class="ml-2 ">Assignee:</li>
+                  <p class="ml-2 ">{{assignees}}</p>
+                </div>
+                <div class="col-sm-2">
+                  <li class="ml-2 ">Workflow</li>
+                  <p class="ml-2 ">{{workflow_name}}</p>
+                </div>
+                <div class="col-sm-2">
+                  <li class="ml-2 ">Review Score</li>
+                  <button type="button" class="btn btn-warning"><span class="badge">{{review_score}}</span></button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+              <div class="w-100 h-20 d-flex flex-wrap justify-content-start align-items-center">
+                <div class="col-sm-12">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <b class="ml-2 ">Posted by {{author}} &nbsp;&nbsp; &nbsp;&nbsp;</b>
+                      </div>
+                      <div class="col-sm-6 ml-4">
+                        <span class="fa fa-star checked" *ngFor="let item of counter(review_score)"></span>
+                        <span class="fa fa-star" *ngFor="let item of counter(5 - review_score)"></span>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-4 ml-3">
+                          <span class="material-icons">
+                            date_range</span>
+                        </div>
+                        <div class="col-sm-4 ml-3">
+                          <p class="ml-2 ">{{date}}</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 ml-3">
+                        <button class="btn btn-warning" (click)="updateIdea(id)">
+                          <span class="material-icons">
+                            edit</span><small>Edit</small>
+                        </button>
+                      </div>
+                      <div class="col-sm-4 ml-3">
+                        <button class="btn btn-danger" (click)="delIdea(id)">
+                          <span class="material-icons">
+                            delete</span><small>Delete</small>
+                        </button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+  </div>
+</div>

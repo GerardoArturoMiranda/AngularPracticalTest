@@ -1,0 +1,105 @@
+@import "node_modules/bootstrap/scss/functions"
+@import "node_modules/bootstrap/scss/variables"
+@import "node_modules/bootstrap/scss/mixins"
+@import "node_modules/bootstrap/scss/nav"
+
+// Variables de bootstrap alteradas
+$nav-component-link-padding-y: 0.5rem
+$nav-component-link-padding-x: 3rem
+
+// Variables generadas
+$nav-component-link-hover-bg: rgba(255,255,255,0.1)
+$nav-component-link-active-bg: rgba(255,255,255,0.2)
+
+// clase personalizada para el panel
+.nav-component
+  display: inline-flex
+  width: 100%
+  height: auto
+  background: #fff
+  @include border-radius(20px)
+  position: relative
+  border-top: rgba($black, 0.04) 1px solid
+  box-shadow: $box-shadow-sm
+  transition: box-shadow 500ms ease
+  z-index: 1
+  .nav-right
+    position: absolute !important
+    right: 0.1vw !important
+    height: inherit
+    padding: 0 $nav-component-link-padding-x
+    display: flex
+    padding: 2rem
+    color: rgba(#05386b, 0.5)
+    @include border-radius(20px)
+    position: relative
+    z-index: 3
+    cursor: pointer
+    transition: color 500ms ease-in-out
+    &:hover
+      color: rgba(#667a1b, 1)
+  .nav-link
+    height: inherit
+    padding: 0 $nav-component-link-padding-x
+    display: flex
+    align-items: center
+    padding: 2rem
+    color: rgba(#05386b, 0.5)
+    @include border-radius(20px)
+    position: relative
+    z-index: 3
+    cursor: pointer
+    transition: color 500ms ease-in-out
+    &:hover
+      color: rgba(#dbe554, 1)
+  .active
+    color: #FFFFFF
+    transition: color 500ms ease
+    &:hover
+      color: #6f7ed7
+      transition: color 500ms ease
+  .active::after
+      content: " "
+      position: absolute
+      left: 0
+      z-index: -1
+      height: 100%
+      width: 100%
+      background: #5425ab
+      color: #fff
+      @include border-radius(20px)
+
+  .card-view
+    margin-top: 3rem !important
+    width: 100%
+    height: auto
+    padding: 2rem
+    margin: 5rem 0
+    border-radius: 10px
+    border-top: rgba($black, 0.04) 1px solid
+    box-shadow: $box-shadow-sm
+    transition: box-shadow 500ms ease
+    background: #a4dfee
+  &:hover
+    box-shadow: $box-shadow
+  .card-view-header
+    margin-bottom: 1rem
+  .card-view-body
+    text-align: justify
+  .large 
+    border-width:0px
+
+.logo
+  height: inherit
+  padding: 0 $nav-component-link-padding-x
+  display: flex
+  padding: 1rem
+  color: rgba(#05386b, 0.5)
+  @include border-radius(20px)
+  position: relative
+  z-index: 3
+  cursor: pointer
+  transition: color 500ms ease-in-out
+
+
+  
